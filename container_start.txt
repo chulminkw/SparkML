@@ -1,0 +1,5 @@
+# windows의 경우 
+docker run -it -p 8888:8888 -v .\docs:/docs --name mmlspark_container -e ACCEPT_EULA=yes -e SPARK_DRIVER_MEMORY=4g -e SPARK_EXECUTOR_MEMORY=4g -e SPARK_WORKER_MEMORY=4g -e SPARK_DAEMON_JAVA_OPTS="-Xms2g -Xmx4g" mmlspark_image jupyter notebook
+
+# mac의 경우
+docker run -it -p 8888:8888 -v ./docs:/docs --name mmlspark_container -e ACCEPT_EULA=yes -e SPARK_DRIVER_MEMORY=4g -e SPARK_EXECUTOR_MEMORY=4g -e SPARK_WORKER_MEMORY=4g -e SPARK_DAEMON_JAVA_OPTS="-Xms2g -Xmx4g" mmlspark_image jupyter notebook
